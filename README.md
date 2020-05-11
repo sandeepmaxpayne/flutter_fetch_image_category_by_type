@@ -1,4 +1,4 @@
-# flutter_fetcch_api
+# flutter_fetch_api
 
 A new Flutter project.
 
