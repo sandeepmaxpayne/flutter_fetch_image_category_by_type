@@ -52,7 +52,9 @@ class _DataScreenState extends State<DataScreen> {
     setState(() {
       for (int i = 0; i <= 9; i++) {
         name = data[i]['user']['name'];
-        img = data[i]['urls']['raw'];
+        // name = data[i]['description'];
+        //img = data[i]['urls']['raw'];
+        img = data[i]['urls']['regular'];
         print("$i. name: $name");
         dataList.add({"name": name, "img": img});
       }
@@ -96,7 +98,7 @@ class _DataScreenState extends State<DataScreen> {
                         inactiveBgColor: Colors.grey,
                         inactiveTextColor: Colors.white,
                         labels: ['Pets', 'Nature'],
-                        activeColors: [Colors.blue, Colors.pink],
+                        activeColors: [Colors.green, Colors.pink],
                         onToggle: (index) {
                           if (index == 0) {
                             toggle1();
@@ -138,9 +140,9 @@ class _DataScreenState extends State<DataScreen> {
                                       height: 5.0,
                                     ),
                                     Text(
-                                      dat['name'],
+                                      "User- ${dat['name']}",
                                       style: TextStyle(
-                                        fontSize: 20.0,
+                                        fontSize: 15.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
